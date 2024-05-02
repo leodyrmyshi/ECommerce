@@ -1,0 +1,28 @@
+@model dyrmyshi.leo._5h.ECommerce.Models.Utente;
+@{
+    ViewData["Title"] = "Login";
+}
+
+<form asp-controller="Home" asp-action="Registrato" method="post">
+    Nome:
+    <input type="text" asp-for="Nome" name="Nome"><br>
+    Cognome:
+    <input type="text" asp-for="Cognome" name="Cognome"><br>
+    <label asp-for="Tipo">Tipo:</label>
+    <select id="genders">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Unidentified">Unidentified</option>
+    </select><br>
+    Email:
+    <input type="text" asp-for="Email" name="Email"><br>
+    Username:
+    <input type="text" asp-for="Username" name="Username"><br>
+    Password:
+    <input type="password" asp-for="Password" name="Password"><br>
+    <input type="submit" name="Login">
+    <input type="reset" name="Annulla"><br>
+    Clicca<br>
+    <a asp-controller="Home" asp-action="Login">qui</a><br>
+    se sei già registrato!
+</form>

@@ -1,0 +1,15 @@
+@model dyrmyshi.leo._5h.ECommerce.Models.Utente;
+@{
+    ViewData["Title"] = "Logout";
+}
+@if ((bool)ViewData["Login"])
+{
+    <p>Contenuto visibile solo agli utenti loggati</p>
+    <form asp-controller="Home" asp-action="Logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+}
+else
+{
+    <p>Devi essere loggato per visualizzare questo contenuto</p>
+}
